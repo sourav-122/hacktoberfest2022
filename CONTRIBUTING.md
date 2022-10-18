@@ -16,7 +16,7 @@ Enter your Name & Github Link in the given format. Don't try to change anything 
 | Soudeep Ghosh | <a href="https://github.com/soudeepghosh">https://github.com/soudeepghosh</a> |
 | Prakash Mondal | <a href="https://github.com/Prakash-Mondal">https://github.com/Prakash-Mondal</a> |
 | Prantik Dhara | <a href="https://github.com/prantikdhara">https://github.com/prantikdhara</a> |
-|  |  |
+| Sagar Debnath | <a href="https://github.com/castbond">https://github.com/castbond</a> |
 |  |  |
 |  |  |
 |  |  |
