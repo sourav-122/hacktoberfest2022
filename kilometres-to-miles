@@ -1,0 +1,4 @@
+kilometre_1 = float (input ("Please enter the speed of car in kilometres per hour: "/))  
+conversion_ratio_1 = 0.621371  
+miles_1 = kilometre_1 * conversion_ratio_1  
+print ("The speed of the car in Miles per hour: ", miles_1)
