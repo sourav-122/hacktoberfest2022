@@ -6,3 +6,22 @@
   or read [FIRST-CONTRIBUTIONS](https://github.com/firstcontributions/first-contributions)
 - Step 1: Fork [👨‍💻](https://github.com/ShankarLohar/Hactober-Fests/fork) the repository by clicking the top right fork button on github or the emoji in this line.
 - Step 2: Add your contribution.
+
+
+
+git clone "url you just copied"
+
+cd first-contributions
+
+git switch -c your-new-branch-name
+
+git add .
+
+git commit -m "Add your-name to Contributors list"
+
+git push origin -u your-branch-name
+
+
+
+
+Compare & pull request
