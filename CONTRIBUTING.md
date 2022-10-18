@@ -12,7 +12,7 @@ Enter your Name & Github Link in the given format. Don't try to change anything 
   
 | Name | Github Link |
 | ------|--------- |
-| Sourav Nayek | <a href="https://github.com/sourav-122">https://github.com/sourav-122</a> |
+| Sourav  | <a href="https://github.com/sourav-122">https://github.com/sourav-122</a> |
 | Soudeep Ghosh | <a href="https://github.com/soudeepghosh">https://github.com/soudeepghosh</a> |
 |  |  |
 |  |  |
