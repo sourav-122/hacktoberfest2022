@@ -1,3 +1,4 @@
+
 # Happy Hacktoberfest 2022
 *Hacktoberfest is a yearly event which encourages not only programmers and coders but also non-technical background to contribute in open source and start their journey with open source.*  
 
@@ -15,6 +16,7 @@ Enter your Name & Github Link in the given format. Don't try to change anything 
 | Sourav  | <a href="https://github.com/sourav-122">https://github.com/sourav-122</a> |
 | Soudeep Ghosh | <a href="https://github.com/soudeepghosh">https://github.com/soudeepghosh</a> |
 | Prakash Mondal | <a href="https://github.com/Prakash-Mondal">https://github.com/Prakash-Mondal</a> |
+| Akash Yadav | <a href="https://github.com/akash786y/2_Hacktoberfest-22"></a>>
 |  |  |
 |  |  |
 |  |  |
