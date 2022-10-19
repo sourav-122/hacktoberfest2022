@@ -19,7 +19,7 @@ Enter your Name & Github Link in the given format. Don't try to change anything 
 | Prantik Dhara | <a href="https://github.com/prantikdhara">https://github.com/prantikdhara</a> |
 | Sagar Debnath | <a href="https://github.com/castbond">https://github.com/castbond</a> |
 | Rudraneel Ghosh | <a href="https://github.com/imru45">https://github.com/imru45</a> |
-| Akash Yadav | <a href="https://github.com/akash786y/2_Hacktoberfest-22"></a>|
+| Akash Yadav | <a href="https://github.com/akash786y"></a>|
 |  |  |
 |  |  |
 |  |  |
