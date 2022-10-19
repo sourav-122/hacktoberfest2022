@@ -18,7 +18,7 @@ Enter your Name & Github Link in the given format. Don't try to change anything 
 | Khemendra Bhardwaj |  <a href="https://github.com/Khemendra-Bhardwaj">https://github.com/Khemendra-Bhardwaj</a> |
 | Prantik Dhara | <a href="https://github.com/prantikdhara">https://github.com/prantikdhara</a> |
 | Sagar Debnath | <a href="https://github.com/castbond">https://github.com/castbond</a> |
-
+| Rudraneel Ghosh | <a href="https://github.com/imru45">https://github.com/imru45</a> |
 |  |  |
 |  |  |
 |  |  |
