@@ -4,7 +4,7 @@
  #define MOD 1000000007
  #define boost ios_base::sync_with_stdio(false);cin.tie(NULL);           
  
- // Problem Statement
+ // Problem Statemen
  // Given an array of positive numbers and a positive integer 
  // target we need to find minumum length of subarray with
  // sum greater equal to target
