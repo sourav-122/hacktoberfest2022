@@ -1,0 +1,57 @@
+ #include<bits/stdc++.h>
+ using namespace std;                          
+ #define ll long long int
+ #define MOD 1000000007
+ #define boost ios_base::sync_with_stdio(false);cin.tie(NULL);           
+ 
+ // Problem Statement
+ // Given an array of positive numbers and a positive integer 
+ // target we need to find minumum length of subarray with
+ // sum greater equal to target
+
+ int minsubArraylength(int target,int a[],int n) 
+ {
+        int start=0,len=1e9,ans=0;  
+
+         // n-length of the array a
+        // start- starting index of the subarray
+        // len- initial size of minimum lenght subarray
+        // ans-  initial calucated sum of subbary
+        // a- given array
+
+        for(int i=0;i<n;i++)
+        {
+            ans+=(a[i]);
+            while(ans>target)
+            {
+                // if given subarry sum is greater than
+                // target then compress the subarray from starting index
+                // until subarray sum greater than given target
+                ans-=a[start];
+                len=min(len,i-start+1);
+                start++;
+            }
+            if(ans>=target)
+            {
+                // minimize the lenght
+                len=min(len,i-start+1);
+            }
+        }
+        // return lenght of minimum size of subarray
+        return len;
+    }
+
+    // time complexity- O(size of array)
+    // space complexity- O(1)
+ int main(){
+  boost
+
+  int n=6;
+  int a[n]={2,3,1,2,4,3};
+  int target=7;
+
+  cout<<minsubArraylength(target,a,n)<<endl;
+
+  // output will be 2
+
+}
