@@ -1,0 +1,48 @@
+
+// Given a Directed Acyclic Graph (DAG) with V 
+// vertices and E edges.
+// Find any Topological Sorting of that Graph.
+
+vector<int> topoSort(int V, vector<int> adj[]) 
+  {
+      int indeg[V];
+      memset(indeg,0,sizeof(indeg));
+      
+      for(int i=0;i<V;i++)
+      {
+          for(auto it:adj[i])
+          {
+              indeg[it]++;
+          }
+      }
+      queue<int>q;
+      for(int i=0;i<V;i++)
+      {
+          if(indeg[i]==0)
+          {
+              q.push(i);
+          }
+      }
+      vector<int>v;
+      while(!q.empty())
+      {
+          int b=q.size();
+          while(b--)
+          {
+              int node=q.front();
+              q.pop();
+              v.push_back(node);
+              for(int child:adj[node])
+              {
+                  if(--indeg[child]==0)
+                  {
+                      q.push(child);
+                  }
+              }
+          }
+      }
+      return v;
+  }
+
+  // time complexity- O(V+E)
+  // space complexity- O(V)
