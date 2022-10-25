@@ -1,16 +1,30 @@
-# layoutwidgets
+# Flutter Layout Widgets [Stack, Row and Column]
 
-A new Flutter project.
+<br>
+ 
 
-## Getting Started
+This repository will help you to get an idea of Row, Column and Stack widgets in Flutter. Because these three widgets are essential and must be understood when creating layouts in Flutter, they are combined to form Layout Widgets.
 
-This project is a starting point for a Flutter application.
+## How to switch from Stack to Row or Column?
+Simply change the initial route in main.dart file. Change /stack to **/column** or **/row** to see respective layout.
+<br>
 
-A few resources to get you started if this is your first Flutter project:
+---
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+## Output
+<table style='cellspacing="0"'>
+  <tr>
+    <th>Stack Widget</th>
+    <th>Column Widget</th>
+    <th>Row Widget</th>
+  </tr>
+  <tr>
+    <td><img src="https://user-images.githubusercontent.com/62079355/197870075-4521a9b1-3fca-4451-89d0-24f1536f47a9.png" height=609, width=281></td>
+    <td><img src="https://user-images.githubusercontent.com/62079355/197870067-2b09c39f-81a5-4a1b-9da9-fe6d063fce30.png" height=609, width=281></td>
+    <td><img src="https://user-images.githubusercontent.com/62079355/197870064-7b29a40d-722d-46ba-8bf5-147765706025.png" height=609, width=281></td>
+  </tr>
+ </table>
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+<br>
+
+---
