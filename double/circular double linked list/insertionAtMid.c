@@ -24,25 +24,15 @@ void display(struct node *head)
 
 void insertionAtMid(struct node *head,int poss)
 {
-    struct node *trav;
-    trav = head;
-    struct node *insertionAtMid = (struct node *)malloc(sizeof(struct node));
-    insertionAtMid->data = 9;
+    struct node *ptr = head;
+    for(int i = 0 ; i < poss-1 ; i++){
+        ptr = ptr->next;
+    }
+    struct node *newNode = (struct node*)malloc(sizeof(struct node));
+    newNode->data = 9;
+    newNode->next = ptr->next;
+    ptr->next = newNode;
    
-    
-   for (int i = 0; i < poss; i++)
-        {
-            trav=trav->next;
-        }
-
-        insertionAtMid->next = trav->next;
-        insertionAtMid->prev=trav;
-        trav->next->prev = insertionAtMid;
-        trav->next = insertionAtMid;
-    
-
-
-    
 }
 int main()
 {
