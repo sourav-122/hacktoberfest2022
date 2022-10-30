@@ -1,41 +1,114 @@
-/**
- * Definition for singly-linked list.
- * struct ListNode {
- *     int val;
- *     ListNode *next;
- *     ListNode() : val(0), next(nullptr) {}
- *     ListNode(int x) : val(x), next(nullptr) {}
- *     ListNode(int x, ListNode *next) : val(x), next(next) {}
- * };
- */
 
-#include <bits/stdc++.h>
+#include <iostream>
+
+class Node
+{
+public:
+	int data;
+	Node *next;
+	Node(int data)
+	{
+		this->data = data;
+		this->next = NULL;
+	}
+};
+
 using namespace std;
 
-class Solution {
-public:
-    struct comp{
-        bool operator()(ListNode* a, ListNode* b){
-            return a->val > b->val;
-        }
-    };
-    
-    ListNode* mergeKLists(vector<ListNode*>& lists) {
-        priority_queue<ListNode*, vector<ListNode*>, comp> pq;
-        for(auto it : lists){
-            if(it!=NULL) pq.push(it);
-        }
-        ListNode* head=new ListNode();
-        ListNode* curr=head;
-        while(!pq.empty()){
-            ListNode* temp=pq.top();
-            pq.pop();
-            curr->next=temp;
-            curr=curr->next;
-            if(temp->next!=NULL){
-                pq.push(temp->next);
-            }
-        }
-        return head->next;
+Node* mergeSortedLinkedLists(Node *head1, Node *head2)
+{
+   if(head1 == NULL){
+       return head2;
+   }
+    if(head2 == NULL){
+        return head1;
     }
-};
+    Node *finalH = NULL ,*finalT = NULL;
+    while(head1 != NULL && head2 != NULL){
+        if((head1->data) <= (head2->data)){
+            if (finalH == NULL){
+                 finalH = head1;
+                 finalT = head1;
+               head1 =  head1->next; 
+            }
+         //   cout << finalH << " " << finalT << endl;
+        else{  
+            finalT->next = head1;
+            finalT = head1;
+            head1 =  head1->next;
+        }        
+     }
+        else{
+          if (finalH == NULL){
+            finalH = head2;
+              finalT = head2;
+                head2 =  head2->next;
+          }
+        //    cout << finalH << " " << finalT << endl;
+      else{
+            finalT->next = head2;
+            finalT = head2;
+            head2 =  head2->next;
+      
+      }
+    }
+    }
+    if(head1 != NULL){
+      finalT->next = head1;  
+         finalT= head1;  
+    }
+    if(head2 != NULL){
+      finalT->next = head2;  
+          finalT = head2;  
+    }
+    return finalH;
+}
+
+
+Node *takeinput()
+{
+	int data;
+	cin >> data;
+	Node *head = NULL, *tail = NULL;
+	while (data != -1)
+	{
+		Node *newNode = new Node(data);
+		if (head == NULL)
+		{
+			head = newNode;
+			tail = newNode;
+		}
+		else
+		{
+			tail->next = newNode;
+			tail = newNode;
+		}
+		cin >> data;
+	}
+	return head;
+}
+
+void print(Node *head)
+{
+	Node *temp = head;
+	while (temp != NULL)
+	{
+		cout << temp->data << " ";
+		temp = temp->next;
+	}
+	cout << endl;
+}
+
+int main()
+{
+	int t;
+	cin >> t;
+	while (t--)
+	{
+		Node *head1 = takeinput();
+		Node *head2 = takeinput();
+		Node *head3 = mergeSortedLinkedLists(head1, head2);
+		print(head3);
+	}
+	return 0;
+}
