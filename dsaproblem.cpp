@@ -1,4 +1,6 @@
-/ C++ program to count number of ways
+
+
+
 // to express x as sum of n-th power
 // of unique natural numbers.
 #include <bits/stdc++.h>
