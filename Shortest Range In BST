@@ -1,0 +1,72 @@
+class Solution{
+    
+    public:
+   int findDepth(Node *root)
+    {
+        if(root==NULL)
+        return 0;
+        return 1 + max(findDepth(root->left), findDepth(root->right));
+        
+    }
+    pair<int, int> shortestRange(Node *root) {
+        // Your code goes here
+        queue<Node*> q;
+        q.push(root);
+        int l = root->data, r = root->data;
+        int d = findDepth(root);
+        
+        vector<vector<int>> nums(d);
+        int i = 0 ;
+        while(!q.empty())
+        {
+            int size = q.size();
+   
+            
+            
+            while(size--)
+            {
+            
+                Node* x = q.front();
+                q.pop();
+                nums[i].push_back(x->data);
+                
+                if(x->left)
+                q.push(x->left);
+                if(x->right)
+                q.push(x->right);
+                
+            }
+         ++i;
+         
+        }
+     
+        pair<int, int> ans;
+        int gap = INT_MAX;
+        set<pair<int, pair<int, int>>> st;
+        for (int i = 0; i < nums.size(); ++i)
+        {
+            st.insert({nums[i][0], {i, 0}});
+        }
+        while (1)
+        {
+            pair<int, pair<int, int>> mini = *st.begin();
+            auto it = st.end();
+            --it;
+            pair<int, pair<int, int>> maxi = *it;
+
+            st.erase(st.begin());
+            if (maxi.first - mini.first < gap)
+            {
+                gap = maxi.first - mini.first;
+                ans.first = mini.first;
+                ans.second = maxi.first;
+            }
+            if (mini.second.second + 1 >= nums[mini.second.first].size())
+                break;
+            st.insert({nums[mini.second.first][mini.second.second + 1], {mini.second.first, mini.second.second + 1}});
+            
+        }
+        return ans;
+    }
+ 
+};
